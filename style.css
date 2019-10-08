@@ -1,0 +1,33 @@
+ul.accordion {
+  border: 1px solid black;
+  list-style: none;
+  padding: 0;
+}
+
+button.accordion-button {
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.accordion-body {
+  height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  visibility: hidden;
+}
+
+.accordion-body p {
+  margin: 0;
+  padding: 1rem;
+}
+
+.accordion-body.active {
+  visibility: visible;
+}
+
+@keyframes delayedHeightAuto {
+  to {
+    height: auto;
+  }
+}
