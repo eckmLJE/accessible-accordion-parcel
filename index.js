@@ -29,7 +29,7 @@ const sampleAccData = {
 }
 
 const buildAccordion = accData => {
-  const itemsHtmlString = accData.items.map(buildAccordionItem).join('')
+  const itemsHtmlString = accData.items.map(mapAccordionItems).join('')
   return /*html*/ `
     <ul class="accordion">
       ${itemsHtmlString}
@@ -37,7 +37,7 @@ const buildAccordion = accData => {
   `
 }
 
-const buildAccordionItem = (item, i) => {
+const mapAccordionItems = (item, i) => {
   return /*html*/ `
     <li
       class="accordion-item"
